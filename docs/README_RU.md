@@ -1,4 +1,4 @@
-# Color Magic · Color Prime Studio
+![Color Magic](assets/hero-ru.svg)
 
 **Подготовьте 3D-иконку один раз. Меняйте палитры. Рендерьте серии PNG.**
 
@@ -14,6 +14,25 @@
 | Подготовить скачанную модель без зон | **Fast Track → Imported model → zones** |
 | Настроить всё вручную | **Workspace** |
 | Получить новую версию | **Check updates** сверху панели |
+
+
+## Как это работает
+
+![Workflow](assets/workflow-ru.svg)
+
+## Как это выглядит в Blender
+
+Реальные скриншоты Blender: рабочая область и маршрут подготовки Fast Track.
+
+![Workspace](assets/screenshot-workspace.png)
+
+<details>
+<summary>Fast Track</summary>
+
+![Fast Track](assets/screenshot-fast-track.png)
+
+</details>
+
 
 ## Установка за минуту
 

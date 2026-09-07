@@ -1,8 +1,27 @@
-# Color Prime Studio
+![Color Magic](docs/assets/hero-en.svg)
 
 **Prepare 3D icons, reuse colors and surfaces, export PNG collections.**
 
 [Download](https://github.com/lomatoq/Color-Magic/releases/latest) · [Русский](docs/README_RU.md) · [Беларуская](docs/README_BE.md)
+
+
+## How it works
+
+![Workflow](docs/assets/workflow-en.svg)
+
+## See it in Blender
+
+Real Blender screenshots: the workspace and the Fast Track preparation route.
+
+![Workspace](docs/assets/screenshot-workspace.png)
+
+<details>
+<summary>Fast Track</summary>
+
+![Fast Track](docs/assets/screenshot-fast-track.png)
+
+</details>
+
 
 ## Install
 

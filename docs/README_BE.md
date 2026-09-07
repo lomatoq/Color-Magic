@@ -1,8 +1,27 @@
-# Color Prime Studio
+![Color Magic](assets/hero-be.svg)
 
 **Падрыхтуйце 3D-іконкі, пераносьце колеры і матэрыялы, экспартуйце серыі PNG.**
 
 [Спампаваць](https://github.com/lomatoq/Color-Magic/releases/latest) · [Русский](README_RU.md) · [English](../README.md)
+
+
+## Як гэта працуе
+
+![Workflow](assets/workflow-be.svg)
+
+## Як гэта выглядае ў Blender
+
+Сапраўдныя скрыншоты Blender: працоўная вобласць і падрыхтоўка Fast Track.
+
+![Workspace](assets/screenshot-workspace.png)
+
+<details>
+<summary>Fast Track</summary>
+
+![Fast Track](assets/screenshot-fast-track.png)
+
+</details>
+
 
 ## Усталяванне
 
