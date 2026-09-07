@@ -9,6 +9,19 @@
 
 ![Workflow](assets/workflow-en.svg)
 
+## In Blender
+
+Tripo moped with an orthographic camera, soft Key / Fill / Rim studio lighting and 23 preserved zones.
+
+![Tripo moped · Workspace](assets/tripo-workspace.png)
+
+<details>
+<summary>Fast Track</summary>
+
+![Tripo moped · Fast Track](assets/tripo-fast-track.png)
+
+</details>
+
 ## Install
 
 Download `Color_Prime_Studio_3.5.2_Universal.zip` from release **Assets**, not GitHub's Source code archive. Keep it zipped. In Blender, use **Edit → Preferences → Add-ons → Install** (3.6) or **Install from Disk** (newer versions), then enable Color Prime Studio. Disable duplicate copies first. Save your work and restart Blender. Open **3D View → N → Color Prime**.

@@ -20,6 +20,19 @@
 
 ![Workflow](assets/workflow-ru.svg)
 
+## В Blender
+
+Мопед Tripo: ортографическая камера, мягкий студийный свет Key / Fill / Rim и 23 сохранённые зоны.
+
+![Tripo moped · Workspace](assets/tripo-workspace.png)
+
+<details>
+<summary>Fast Track</summary>
+
+![Tripo moped · Fast Track](assets/tripo-fast-track.png)
+
+</details>
+
 ## Установка за минуту
 
 1. Откройте [последний выпуск](https://github.com/lomatoq/Color-Magic/releases/latest).

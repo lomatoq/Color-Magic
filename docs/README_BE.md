@@ -9,6 +9,19 @@
 
 ![Workflow](assets/workflow-be.svg)
 
+## У Blender
+
+Мапед Tripo: артаграфічная камера, мяккае студыйнае святло Key / Fill / Rim і 23 захаваныя зоны.
+
+![Tripo moped · Workspace](assets/tripo-workspace.png)
+
+<details>
+<summary>Fast Track</summary>
+
+![Tripo moped · Fast Track](assets/tripo-fast-track.png)
+
+</details>
+
 ## Усталяванне
 
 У **Assets** апошняга выпуску спампуйце `Color_Prime_Studio_3.5.2_Universal.zip`, а не Source code. Не распакоўвайце. У Blender: **Edit → Preferences → Add-ons → Install** (3.6) або **Install from Disk** (новыя версіі). Уключыце Color Prime Studio; спачатку адключыце дублікаты. Захавайце працу і перазапусціце Blender. Адкрыйце **3D View → N → Color Prime**.
