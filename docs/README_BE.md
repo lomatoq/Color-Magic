@@ -2,7 +2,7 @@
 
 **Падрыхтуйце 3D-іконкі, пераносьце колеры і матэрыялы, экспартуйце серыі PNG.**
 
-[Спампаваць](https://github.com/lomatoq/Color-Magic/releases/latest) · [Русский](../README.md) · [English](README_EN.md)
+[Спампаваць](https://github.com/lomatoq/Color-Magic/releases/latest) · [Русский](README_RU.md) · [English](../README.md)
 
 ## Усталяванне
 

@@ -2,7 +2,7 @@
 
 **Prepare 3D icons, reuse colors and surfaces, export PNG collections.**
 
-[Download](https://github.com/lomatoq/Color-Magic/releases/latest) · [Русский](../README.md) · [Беларуская](README_BE.md)
+[Download](https://github.com/lomatoq/Color-Magic/releases/latest) · [Русский](README_RU.md) · [Беларуская](README_BE.md)
 
 ## Install
 

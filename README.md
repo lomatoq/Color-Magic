@@ -1,119 +1,78 @@
-# Color Magic · Color Prime Studio
+# Color Prime Studio
 
-**Подготовьте 3D-иконку один раз. Меняйте палитры. Рендерьте серии PNG.**
+**Prepare 3D icons, reuse colors and surfaces, export PNG collections.**
 
-[Скачать аддон](https://github.com/lomatoq/Color-Magic/releases/latest) · [English](docs/README_EN.md) · [Беларуская](docs/README_BE.md) · [Сообщить об ошибке](https://github.com/lomatoq/Color-Magic/issues)
+[Download](https://github.com/lomatoq/Color-Magic/releases/latest) · [Русский](docs/README_RU.md) · [Беларуская](docs/README_BE.md)
 
-Аддон для Blender: зоны модели, два цветовых семейства **Main / Accent**, наследники с разными поверхностями, студийная камера и пакетный экспорт. Золото и другие **Fixed**-материалы можно оставить неизменными.
+## Install
 
-| Нужно | Куда идти |
+Download `Color_Prime_Studio_3.5.2_Universal.zip` from release **Assets**, not GitHub's Source code archive. Keep it zipped. In Blender, use **Edit → Preferences → Add-ons → Install** (3.6) or **Install from Disk** (newer versions), then enable Color Prime Studio. Disable duplicate copies first. Save your work and restart Blender. Open **3D View → N → Color Prime**.
+
+Tested on Windows with Blender **3.6.5 and 5.2.1 LTS**. Choose **EN / Бел** in the panel. Native Blender dialogs and tooltips follow Blender's language setting.
+
+## Choose your task
+
+| Task | Route |
 | --- | --- |
-| Просто отрендерить модель как есть | **Fast Track → Many icons → consistent framing**, затем текущие цвета и Export PNG |
-| Сделать серию одинаково вписанных иконок | Тот же маршрут, отметить несколько моделей |
-| Перенести вид сейфа на скутер | **Fast Track → Model → another model** |
-| Подготовить скачанную модель без зон | **Fast Track → Imported model → zones** |
-| Настроить всё вручную | **Workspace** |
-| Получить новую версию | **Check updates** сверху панели |
+| Render one model as it is | Fast Track → Many icons → consistent framing; check one model; Prepare batch; Current model colors; folder/size; render |
+| Render many icons | Same route, check all models; camera fits each separately without scaling geometry |
+| Copy a safe's appearance to a scooter | Fast Track → Model → another model; select source and checked recipients; transfer |
+| Find missing regions on an import | Fast Track → Imported model → zones; check recipients; prepare |
+| Detailed editing | Workspace |
 
-## Установка за минуту
+Fast Track prepares the task; it **does not start rendering**. Source models are excluded from transfer recipients. Transfer copies both colors and surfaces. For colors alone, use **Workspace → From Model**, disable material transfer, then Apply. Prepare zones first when the recipient needs them.
 
-1. Откройте [последний выпуск](https://github.com/lomatoq/Color-Magic/releases/latest).
-2. В **Assets** скачайте `Color_Prime_Studio_3.5.2_Universal.zip`. Не выбирайте GitHub **Source code** и не распаковывайте ZIP.
-3. В Blender откройте **Edit → Preferences → Add-ons**. В Blender 3.6 нажмите **Install**; в новых версиях найдите **Install from Disk** в меню настроек аддонов.
-4. Выберите ZIP и включите **Color Prime Studio**. Если есть другая копия Color Prime, сначала отключите её.
-5. Сохраните работу и перезапустите Blender. В 3D View нажмите **N → Color Prime**. Панель также доступна в Output Properties.
+## Models, regions and protected materials
 
-Проверено на Windows в **Blender 3.6.5 и 5.2.1 LTS**. Другие версии и платформы не входят в проверенную матрицу. Интерфейс аддона: **EN / Бел**. Язык стандартных окон, выбора цвета и полей самого Blender задаётся в настройках Blender.
+Find models or add selected objects in Workspace. A checkbox controls processing/export; the eye controls visibility. Prepare creates/reuses a collection and `Anchor_<model>` root, preserving transforms and hierarchy. Removing a list row does not delete geometry.
 
-## Быстрый старт: один PNG без перекрашивания
+Use existing regions by default. Missing-region detection preserves authored materials; explicit rebuilding may replace boundaries. Automatic segmentation is a heuristic, so check unfamiliar/dense meshes. To control exactly what changes, select objects or faces and assign **Main**, **Accent**, or **Fixed**. Keep gold/coins Fixed. Unsupported texture/shader graphs need an explicit safe color input or current-appearance export.
 
-1. Импортируйте модель обычным способом Blender.
-2. Откройте **Fast Track**, выберите маршрут для серии иконок и нажмите **Find models**.
-3. Отметьте нужную модель. Нажмите **Prepare batch**: появятся коллекция/корень и студия. Геометрия не масштабируется.
-4. В появившемся экспорте оставьте **Current model colors**, задайте папку и размер.
-5. Проверьте число PNG и пример пути. Запустите рендер.
+## Palettes and material variants
 
-Подготовка не запускает рендер. Этот маршрут подходит и для одной модели. Для текущих цветов не нужны Main/Accent-палитры.
+Create a named palette or capture one from a model. Apply establishes scoped native color bindings on checked models. Afterwards **Preview colors** updates shared colors without finding zones again. Restore cancels preview; Apply keeps it.
 
-## 20 моделей → 20 отдельных иконок
+In material instances, choose Main/Accent, count and surface style. **Create** adds library materials. **Autoassign** places them on zones; manual assignment is also available. Surface edits may require Autoassign again; follow the state shown in the panel. Shader/tint settings are available on variants. Colors inherit through normal Blender nodes.
 
-В маршруте серии отметьте все нужные модели. Аддон подготовит камеру и будет вписывать каждую модель в кадр отдельно, сохраняя исходный масштаб геометрии. Настройте ракурс и поля кадра в **Camera and light**.
+Palette JSON stores colors, names, order and inclusion flags. Save material graphs, assignments and model organization in the **`.blend`**. Ctrl+Z undoes operations; Ctrl+S saves the file.
 
-Модели рендерятся **по одной**; остальные скрываются на время кадра. После очереди восстанавливаются цвета, видимость и временные настройки. Галочка модели означает участие в обработке/экспорте, глаз — только видимость в сцене.
+## Export
 
-## Перенести цвета и материалы с одной модели на другую
+For unchanged materials choose **Current model colors**. For recoloring choose workspace palettes and **All combinations**. Export visits Main × Accent × models × sizes: **10 × 10 × 1 × 3 = 300 PNGs**. Paired export is available too.
 
-1. Обе модели должны быть в списке. В **Fast Track → Model → another model** выберите источник, например сейф.
-2. Отметьте получателей, например скутер. Источник не считается получателем.
-3. Запустите перенос. Этот маршрут переносит **цвета и поверхности**; источник и Fixed-материалы сохраняются.
-4. Для переноса только цветов используйте **Workspace → From Model**, отключите перенос материалов и нажмите Apply.
+Enable 1x/2x/3x, custom fractional scales or absolute dimensions. Check final pixels, file count and path preview before rendering. Folders start with the model, then Main/Accent choices; filenames include model, colors and size. Existing paths are checked before rendering; overwriting must be enabled explicitly.
 
-Если получателю нужны зоны, сначала подготовьте их. Перенос не может угадать художественное назначение каждой детали: проверьте результат и поправьте нужные зоны вручную.
+Models render sequentially, with other models hidden per frame. Temporary colors, visibility and render settings are restored. Camera and light contains views, framing, lights and background controls. A visible background plane is independent of PNG film transparency.
 
-## Скачанная модель: зоны и выбор перекрашиваемых деталей
+## Update and roll back
 
-**Fast Track → Imported model → zones** создаёт структуру модели и ищет недостающие зоны. Готовая разметка и материалы сохраняются; маршрут не перекрашивает модель.
+Click **Check updates** at the panel top. If a newer stable GitHub release exists, click **Install update · restart required**. The download runs in the background; the ZIP, SHA256 and internal file hashes are checked before installation. Previous addon files are backed up. Scene files are not changed. **Save and restart Blender** to load the new code.
 
-В **Workspace** у каждой модели доступны подготовка и поиск зон. Подготовка создаёт/использует отдельную коллекцию и корень `Anchor_<model>`, сохраняя мировые трансформации и внутреннюю иерархию.
+Updates need GitHub access and write access to the addon directory; no update is installed during rendering. Core modeling/rendering works offline. Hashes detect corruption; they are not an independent publisher signature.
 
-Для точного выбора откройте инструменты выбранных деталей: выделите объекты или грани в Edit Mode и назначьте **Main**, **Accent** либо **Fixed**. Например, корпус — Main, ручки — Accent, монеты — Fixed. Не используйте пересоздание разметки, если хотите оставить ручные границы.
+Backup ZIPs live in `.color_prime_backups` beside the addon folder; the exact path is printed in Blender's system console. Install a backup ZIP, or a previous GitHub release ZIP, through Preferences to roll back. Restart and keep only one copy enabled.
 
-Автоматические зоны — геометрическая эвристика. Сложные слитые, сильно плотные или необычные модели могут требовать ручной коррекции. Произвольный шейдер с текстурами не всегда имеет безопасный изменяемый цветовой вход.
+## Troubleshooting
 
-## Палитры, наследники и быстрый просмотр
-
-- Создайте именованную палитру в **Workspace** или возьмите цвета из модели. Добавьте Main/Accent-цвета и отметьте нужные для экспорта.
-- **Apply** подготавливает привязки для отмеченных моделей. Последующий **Preview colors** меняет общие цветовые источники, без повторного поиска зон. Restore отменяет просмотр; Apply оставляет результат.
-- В блоке экземпляров выберите Main/Accent, количество и тип поверхностей. **Create** создаёт материалы библиотеки; **Autoassign** назначает их зонам. Сам факт создания не означает назначения.
-- У экземпляра можно менять поверхность, шейдер и оттенок. Цвет наследуется через обычные ноды Blender. Изменение поверхности в библиотеке может требовать повторного Autoassign — следите за состоянием в панели.
-- JSON сохраняет палитры: цвета, имена, порядок и отметки. **Материалы с нодами, модели и назначения сохраняйте в `.blend`**.
-
-## Все сочетания цветов и размеров
-
-В **Export PNG** выберите палитры рабочего экрана и **All combinations**. Очередь — выбранные Main × Accent × модели × размеры. Доступны текущий вид и попарный режим.
-
-**10 Main × 10 Accent × 3 размера = 300 PNG на модель.** Для двух моделей — 600. Доступны 1x, 2x, 3x, собственные дробные масштабы и абсолютные размеры. Сначала проверьте итоговые пиксели и число файлов, затем запускайте.
-
-Папки начинаются с имени модели, далее Main и Accent; точный путь показан в панели до запуска. Имена PNG содержат модель, цвета и размер. Конфликты путей проверяются; перезапись требует явного включения. Для новой серии удобно использовать пустую папку.
-
-Прозрачность PNG и фоновая плоскость — разные настройки. Видимый фон не становится прозрачным от включения прозрачной плёнки. Ракурс, освещение и фон настраиваются в **Camera and light**.
-
-## Обновление из GitHub
-
-1. Нажмите **Check updates** вверху панели. Проверка выполняется только по вашему запросу.
-2. Если есть более новая стабильная версия, нажмите **Install update · restart required**.
-3. Аддон скачает ZIP и SHA256 из Releases, проверит архив и внутренние хеши, сохранит предыдущую установку и заменит файлы. Модели и `.blend` не изменяются.
-4. **Сохраните работу и перезапустите Blender.** До перезапуска выполняется прежний загруженный код.
-
-Сеть нужна только для обновлений и ссылок; основной рабочий процесс локальный. Во время рендера обновление недоступно. Нужны доступ к публичному GitHub и права записи в каталог аддона. Проверка хешей обнаруживает повреждения; это не независимая цифровая подпись издателя.
-
-**Откат:** резервные ZIP лежат рядом с каталогом аддонов, в `.color_prime_backups`; точный путь печатается в системной консоли при обновлении. Закройте/перезапустите Blender и установите нужный резервный ZIP через Preferences → Add-ons. Альтернатива — ZIP предыдущего [выпуска](https://github.com/lomatoq/Color-Magic/releases). Не включайте две копии одновременно.
-
-## Если что-то не получается
-
-| Симптом | Что сделать |
+| Problem | Next step |
 | --- | --- |
-| Панели нет | Включите аддон, откройте 3D View, нажмите N, найдите Color Prime; перезапустите после установки |
-| Вторая копия / mixed installation | Отключите дубликат, перезапустите, установите полный release ZIP |
-| Модель не найдена | Выделите её корень/меши и добавьте выбранное в Workspace; проверьте структуру Empty/коллекций |
-| Кнопка неактивна | Прочитайте пояснение и наведите курсор; проверьте галочки моделей, Object Mode и состояние текущей операции |
-| Нет цвета для экспорта / Auto Setup | Для неизменённого вида выберите Current model colors; для палитры назначьте Main/Accent безопасным входам и примените цвета |
-| Золото перекрашивается | Отметьте нужные детали/грани Fixed до применения; Ctrl+Z отменяет предыдущую операцию |
-| Не нравится автоматическая разметка | Сохраните существующие зоны; поправьте отдельные детали вручную вместо повторного пересоздания всего |
-| Материалы созданы, но не видны | Create создаёт библиотеку; нажмите Autoassign либо назначьте материал вручную |
-| Цвета меняются медленно | После первого Apply используйте Preview; не запускайте поиск зон для смены палитры. Рендер-просмотр Blender тоже требует GPU/CPU |
-| Удалили студию | Откройте Camera and light и создайте/восстановите оборудование |
-| Чёрный/пустой кадр | Проверьте активную камеру, свет, выбранную модель и render visibility; подготовьте студию |
-| Экспорт остановился | Прочитайте ошибку, проверьте папку, свободное место и конфликты файлов; дождитесь восстановления сцены |
-| Обновление не скачивается | Проверьте сеть/доступ GitHub; скачайте release ZIP вручную. Техническая причина — в системной консоли |
-| Обновление установлено, версия прежняя | Сохраните `.blend` и полностью перезапустите Blender |
+| No panel | Enable the addon, open 3D View, press N; restart after installation |
+| Mixed installation / duplicate | Disable other copies, restart, install the complete release ZIP |
+| No model in list | Select its root/meshes and add selected; inspect Empty/collection hierarchy |
+| Disabled action | Read the nearby state and hover help; check model checkboxes, Object Mode and active jobs |
+| Auto Setup / no writable colors | Current model colors needs no recolor binding; palette export requires editable Main/Accent inputs |
+| Gold changes | Assign Fixed before applying; undo the previous change if needed |
+| Zones look wrong | Preserve existing boundaries and correct selected parts manually |
+| Variants do not appear | Create only builds the library; Autoassign or assign manually |
+| Slow color changes | Apply once, then Preview; do not rerun zone discovery for each palette |
+| Deleted camera/lights | Create/repair the studio in Camera and light |
+| Empty render | Check camera, lights and render visibility; prepare the studio |
+| Export stops | Check error, disk space, output permissions and filename collisions; let restoration finish |
+| Update fails | Check network and directory permissions; manually install release ZIP; see console for technical error |
+| Version unchanged | Save and fully restart Blender |
 
-Для отчёта об ошибке приложите версию Blender/аддона, шаги, ожидаемый результат и полный traceback. Модель прикладывайте только если её можно распространять. Не публикуйте личные пути и закрытые ассеты.
+Report Blender/addon versions, reproduction steps, expected result and traceback in [Issues](https://github.com/lomatoq/Color-Magic/issues). Share only models you have permission to distribute; remove private paths.
 
-## Проверки и разработка
+## Build and tests
 
-Исходники — `source/color_prime`, проверки — `tests`, сборка — `python tools/build.py`. Установочный ZIP и SHA256 создаются в `dist`. После изменения Python-файлов **пересоберите пакет**, иначе контроль целостности обнаружит смешанную установку.
-
-Проверки включают переключение EN/Бел, Fast Track, материалы/зоны, сохранение и повторное открытие, реальный PNG-экспорт, восстановление сцены и большую очередь. Файлы пользовательских моделей не входят в репозиторий; отдельные исторические тесты требуют внешние fixtures. Проверенная матрица не гарантирует совместимость с любым сторонним шейдером или сеткой.
-
-История выпусков: [CHANGELOG](source/color_prime/CHANGELOG.md). Лицензия: [GNU GPL v3](source/color_prime/LICENSE), как в исходном пакете аддона.
+Run `python tools/build.py` to generate ZIP and SHA256 in `dist`. Rebuild after Python changes to refresh the integrity manifest. Tests are in `tests`; historical scene-specific tests require external fixtures. Windows Blender 3.6.5/5.2.1 tests cover native setup, render/restoration, language switching, Fast Track and update validation. Arbitrary third-party graphs and meshes are not guaranteed. License: [GNU GPL v3](source/color_prime/LICENSE), retained from the original addon package.
