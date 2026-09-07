@@ -9,20 +9,6 @@
 
 ![Workflow](assets/workflow-en.svg)
 
-## See it in Blender
-
-Real Blender screenshots: the workspace and the Fast Track preparation route.
-
-![Workspace](assets/screenshot-workspace.png)
-
-<details>
-<summary>Fast Track</summary>
-
-![Fast Track](assets/screenshot-fast-track.png)
-
-</details>
-
-
 ## Install
 
 Download `Color_Prime_Studio_3.5.2_Universal.zip` from release **Assets**, not GitHub's Source code archive. Keep it zipped. In Blender, use **Edit → Preferences → Add-ons → Install** (3.6) or **Install from Disk** (newer versions), then enable Color Prime Studio. Disable duplicate copies first. Save your work and restart Blender. Open **3D View → N → Color Prime**.

@@ -20,20 +20,6 @@
 
 ![Workflow](assets/workflow-ru.svg)
 
-## Как это выглядит в Blender
-
-Реальные скриншоты Blender: рабочая область и маршрут подготовки Fast Track.
-
-![Workspace](assets/screenshot-workspace.png)
-
-<details>
-<summary>Fast Track</summary>
-
-![Fast Track](assets/screenshot-fast-track.png)
-
-</details>
-
-
 ## Установка за минуту
 
 1. Откройте [последний выпуск](https://github.com/lomatoq/Color-Magic/releases/latest).
