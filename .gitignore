@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+evidence/
+dist/
+publish/
+*.blend
+*.blend1
+*.blend2
