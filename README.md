@@ -51,7 +51,8 @@ Use existing regions by default. Missing-region detection preserves authored mat
 New palettes start with **Spectrum 16**: the 0–F hue wheel in both Main and Accent
 (256 color pairs). Existing palettes keep their colors. Use **Workspace → Add test
 scooter** to append the bundled 23-zone sample with one fixed gold exhaust and
-silver hardware. The sample is included in the install ZIP.
+metallic Accent hardware (Metallic 1.0, Roughness 0.26). Only gold is Fixed.
+The sample is included in the install ZIP.
 
 Create a named palette or capture one from a model. Apply establishes scoped native color bindings on checked models. Afterwards **Preview colors** updates shared colors without finding zones again. Restore cancels preview; Apply keeps it.
 

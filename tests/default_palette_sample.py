@@ -29,6 +29,9 @@ assert len(obj.data.polygons)>1000
 assert find_zones(bpy.context,s.icon_sets[0])==23
 gold=[m for m in obj.data.materials if m and m.get('showreel_gold')]
 assert len(gold)==1 and gold[0].get('color_prime_family')=='FIXED'
+used={obj.data.materials[f.material_index] for f in obj.data.polygons}
+assert all(m.get('showreel_gold') for m in used if m.get('color_prime_family')=='FIXED')
+assert any(m.get('color_prime_family')=='ACCENT' and m.node_tree.nodes.get('Principled BSDF').inputs['Metallic'].default_value==1 for m in used)
 before=tuple(gold[0].node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value)
 apply(bpy.context,custom,list(s.icon_sets),False)
 assert tuple(gold[0].node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value)==before
