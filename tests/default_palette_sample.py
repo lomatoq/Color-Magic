@@ -32,6 +32,13 @@ assert len(gold)==1 and gold[0].get('color_prime_family')=='FIXED'
 used={obj.data.materials[f.material_index] for f in obj.data.polygons}
 assert all(m.get('showreel_gold') for m in used if m.get('color_prime_family')=='FIXED')
 assert any(m.get('color_prime_family')=='ACCENT' and m.node_tree.nodes.get('Principled BSDF').inputs['Metallic'].default_value==1 for m in used)
+from color_prime.surface_adapter import REGION_ATTRIBUTE
+for face,region in zip(obj.data.polygons,obj.data.attributes[REGION_ATTRIBUTE].data):
+    material=obj.data.materials[face.material_index]
+    shader=material.node_tree.nodes.get('Principled BSDF')
+    if region.value==0:assert shader.inputs['Roughness'].default_value>.8
+    if region.value==4:assert shader.inputs['Metallic'].default_value==1 and material.get('color_prime_family')=='MAIN'
+assert any(m.node_tree.nodes.get('Principled BSDF').inputs['Roughness'].default_value<.15 for m in used)
 before=tuple(gold[0].node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value)
 apply(bpy.context,custom,list(s.icon_sets),False)
 assert tuple(gold[0].node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value)==before
