@@ -7,3 +7,4 @@ publish/
 *.blend
 *.blend1
 *.blend2
+!source/color_prime/assets/Scooter.blend

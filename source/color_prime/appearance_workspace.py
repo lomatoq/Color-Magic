@@ -76,6 +76,9 @@ def new_palette(s,name='Новая палитра',colors=None):
         row=(p.main_colors if family=='MAIN' else p.accent_colors).add();row.name=family.title()+' 1'
         row.color=(colors or {}).get(family,(.45,.12,.65,1) if family=='MAIN' else (.15,.65,.25,1))
         setattr(p,'main_base' if family=='MAIN' else 'accent_base',row.color)
+    if colors is None:
+        from .default_palette import populate
+        populate(p)
     s.appearance_index=len(s.appearances)-1
     return p
 
@@ -429,6 +432,7 @@ def draw(layout,context,s):
             box.template_list('COLORPRIME_UL_appearances','palettes',s,'appearances',s,'appearance_index',rows=min(3,max(2,len(s.appearances))))
             lines(box,'Выделенная палитра — для применения. Галочки — для пакетного экспорта.',context)
         button(box,'color_prime.appearance','Новая палитра','ADD').action='NEW'
+        button(box,'color_prime.sample_scooter','Add test scooter','MESH_DATA')
         files=box.row(align=True)
         files.operator('color_prime.workspace_palette_file',text='Load JSON',icon='IMPORT').action='LOAD'
         files.operator('color_prime.workspace_palette_file',text='Save JSON',icon='EXPORT').action='SAVE'
@@ -520,4 +524,5 @@ from .workspace_variants import CLASSES as VARIANT_CLASSES
 from .workspace_palette_io import CLASSES as FILE_CLASSES
 from .fast_track import CLASSES as FAST_CLASSES
 from .updater import CLASSES as UPDATE_CLASSES
-CLASSES=(COLORPRIME_OT_appearance,COLORPRIME_UL_appearances)+VARIANT_CLASSES+FILE_CLASSES+FAST_CLASSES+UPDATE_CLASSES
+from .sample_model import CLASSES as SAMPLE_CLASSES
+CLASSES=(COLORPRIME_OT_appearance,COLORPRIME_UL_appearances)+VARIANT_CLASSES+FILE_CLASSES+FAST_CLASSES+UPDATE_CLASSES+SAMPLE_CLASSES

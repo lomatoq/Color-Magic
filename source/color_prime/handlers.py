@@ -44,6 +44,8 @@ def load_post(_):
     for scene in iter_scenes():
         errors = recover(scene)
         _reset_scene_runtime(scene)
+        from .default_palette import ensure
+        ensure(scene)
         if errors:
             scene.color_prime.last_error = 'Render recovery: ' + '; '.join(errors)
         st = scene.color_prime.studio

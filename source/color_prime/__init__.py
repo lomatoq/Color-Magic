@@ -132,6 +132,8 @@ def register():
                 cls.description=classmethod(operator_description)
             _register_class(cls)
         handlers.register_handlers()
+        from .default_palette import initialize
+        if not bpy.app.timers.is_registered(initialize):bpy.app.timers.register(initialize,first_interval=.1)
         from .tooltip_locale import sync_language
         if not bpy.app.timers.is_registered(sync_language):bpy.app.timers.register(sync_language,first_interval=.1,persistent=True)
         _REGISTERED = True
@@ -143,6 +145,8 @@ def register():
 
 
 def unregister():
+    from .default_palette import initialize
+    if bpy.app.timers.is_registered(initialize):bpy.app.timers.unregister(initialize)
     from .updater import shutdown as stop_update
     stop_update()
     from .tooltip_locale import sync_language

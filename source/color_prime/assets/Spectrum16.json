@@ -1,0 +1,329 @@
+{
+  "format": "ColorPrimePalette",
+  "version": 1,
+  "name": "Spectrum 16 · Main × Accent",
+  "main_colors": [
+    {
+      "name": "0 Red",
+      "color": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "1 Orange",
+      "color": [
+        1.0,
+        0.1214856281876564,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "2 Amber",
+      "color": [
+        1.0,
+        0.5225215554237366,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "3 Yellow",
+      "color": [
+        0.8207967281341553,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "4 Lime",
+      "color": [
+        0.29943886399269104,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "5 Green",
+      "color": [
+        0.012806794606149197,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "6 Teal",
+      "color": [
+        0.0,
+        1.0,
+        0.07323895394802094,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "7 Turquois",
+      "color": [
+        0.0,
+        1.0,
+        0.35884857177734375,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "8 Cyan",
+      "color": [
+        0.0,
+        0.7874122858047485,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "9 Aqua",
+      "color": [
+        0.0,
+        0.35884857177734375,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "A Blue",
+      "color": [
+        0.0,
+        0.07323895394802094,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "B Indigo",
+      "color": [
+        0.03310476616024971,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "C Purple",
+      "color": [
+        0.21404114365577698,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "D Magenta",
+      "color": [
+        0.5759625434875488,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "E Pink",
+      "color": [
+        1.0,
+        0.0,
+        0.5225215554237366,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "F Fuchsia",
+      "color": [
+        1.0,
+        0.0,
+        0.11069304496049881,
+        1.0
+      ],
+      "enabled": true
+    }
+  ],
+  "accent_colors": [
+    {
+      "name": "0 Red",
+      "color": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "1 Orange",
+      "color": [
+        1.0,
+        0.1214856281876564,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "2 Amber",
+      "color": [
+        1.0,
+        0.5225215554237366,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "3 Yellow",
+      "color": [
+        0.8207967281341553,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "4 Lime",
+      "color": [
+        0.29943886399269104,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "5 Green",
+      "color": [
+        0.012806794606149197,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "6 Teal",
+      "color": [
+        0.0,
+        1.0,
+        0.07323895394802094,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "7 Turquois",
+      "color": [
+        0.0,
+        1.0,
+        0.35884857177734375,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "8 Cyan",
+      "color": [
+        0.0,
+        0.7874122858047485,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "9 Aqua",
+      "color": [
+        0.0,
+        0.35884857177734375,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "A Blue",
+      "color": [
+        0.0,
+        0.07323895394802094,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "B Indigo",
+      "color": [
+        0.03310476616024971,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "C Purple",
+      "color": [
+        0.21404114365577698,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "D Magenta",
+      "color": [
+        0.5759625434875488,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "E Pink",
+      "color": [
+        1.0,
+        0.0,
+        0.5225215554237366,
+        1.0
+      ],
+      "enabled": true
+    },
+    {
+      "name": "F Fuchsia",
+      "color": [
+        1.0,
+        0.0,
+        0.11069304496049881,
+        1.0
+      ],
+      "enabled": true
+    }
+  ]
+}
