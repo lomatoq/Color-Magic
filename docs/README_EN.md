@@ -1,4 +1,10 @@
-![Color Magic](assets/hero-en.svg)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/color-magic-logo-dark.webp">
+    <source media="(prefers-color-scheme: light)" srcset="assets/color-magic-logo-light.webp">
+    <img src="assets/color-magic-logo-light.webp" width="480" height="467" alt="Color Magic">
+  </picture>
+</p>
 
 **Prepare 3D icons, reuse colors and surfaces, export PNG collections.**
 
